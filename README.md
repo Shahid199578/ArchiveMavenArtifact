@@ -6,6 +6,7 @@ This Jenkins Pipeline script automates the process of checking out code from a G
 
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
+- [Maven Installation](#maven-installation)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -23,6 +24,47 @@ Before setting up and running this Jenkins Pipeline, ensure that you have the fo
 - Git: Ensure that Git is installed on your Jenkins server.
 - Maven: Install and configure Maven on your Jenkins server.
 - GitHub Repository: Create a GitHub repository that contains your Java project with a `pom.xml` file and the source code.
+
+## Maven Installation
+
+- Maven: Install and configure Maven on your Jenkins server. You can specify the Maven installation tool as "Maven-Tool" or use the name of your Maven tool installation in your Jenkins Pipeline configuration.
+
+Here's how to configure the Maven tool in your Jenkins Pipeline:
+
+1. Go to your Jenkins server's dashboard.
+
+2. Click on "Manage Jenkins" in the left sidebar.
+
+3. Select "Global Tool Configuration."
+
+4. Scroll down to the "Maven" section.
+
+5. Click on "Add Maven" to define a Maven installation.
+
+6. Provide a name for the Maven installation, e.g., "Maven-Tool," or use an existing name if applicable.
+
+7. Specify the Maven installation directory or let Jenkins install it automatically.
+
+8. Save your configuration.
+
+Now, in your Jenkins Pipeline script, use the specified Maven installation tool (e.g., "Maven-Tool") like this:
+
+```groovy
+pipeline {
+    agent any
+    tools {
+        maven 'Maven-Tool' // Use the name you specified in the Global Tool Configuration
+    }
+    stages {
+        // ...
+        stage("Maven Build") {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        // ...
+    }
+}
 
 ## Getting Started
 
