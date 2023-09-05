@@ -27,7 +27,7 @@ Before setting up and running this Jenkins Pipeline, ensure that you have the fo
 
 ## Maven Installation
 
-- Maven: Install and configure Maven on your Jenkins server. You can specify the Maven installation tool as "Maven-Tool" or use the name of your Maven tool installation in your Jenkins Pipeline configuration.
+Maven: Install and configure Maven on your Jenkins server. You can specify the Maven installation tool as "Maven-Tool" or use the name of your Maven tool installation in your Jenkins Pipeline configuration.
 
 Here's how to configure the Maven tool in your Jenkins Pipeline:
 
@@ -65,6 +65,7 @@ pipeline {
         // ...
     }
 }
+...
 
 ## Getting Started
 
