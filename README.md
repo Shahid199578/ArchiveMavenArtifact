@@ -31,23 +31,23 @@ Maven: Install and configure Maven on your Jenkins server. You can specify the M
 
 Here's how to configure the Maven tool in your Jenkins Pipeline:
 
-1. Go to your Jenkins server's dashboard.
+1. Go to your **Jenkins server's** dashboard.
 
-2. Click on "Manage Jenkins" in the left sidebar.
+2. Click on **"Manage Jenkins"** in the left sidebar.
 
-3. Select "Global Tool Configuration."
+3. Select **"Global Tool Configuration"**.
 
-4. Scroll down to the "Maven" section.
+4. Scroll down to the **"Maven"** section.
 
-5. Click on "Add Maven" to define a Maven installation.
+5. Click on **"Add Maven"** to define a Maven installation.
 
-6. Provide a name for the Maven installation, e.g., "Maven-Tool," or use an existing name if applicable.
+6. Provide a name for the Maven installation, e.g., **"Maven-Tool"** or use an existing name if applicable.
 
 7. Specify the Maven installation directory or let Jenkins install it automatically.
 
 8. Save your configuration.
 
-Now, in your Jenkins Pipeline script, use the specified Maven installation tool (e.g., "Maven-Tool") like this:
+Now, in your Jenkins Pipeline script, use the specified Maven installation tool (e.g., **"Maven-Tool"**) like this:
 
 ```groovy
 pipeline {
@@ -75,7 +75,7 @@ Follow these steps to set up and run the Jenkins Pipeline:
 
 2. Create a new Jenkins Pipeline job and configure it to use this repository as the source.
 
-3. In the pipeline configuration, specify the Maven installation tool as "Maven-Tool" or the name of your Maven tool installation.
+3. In the pipeline configuration, specify the Maven installation tool as **"Maven-Tool"** or the name of your Maven tool installation.
 
 4. Save the pipeline configuration.
 
